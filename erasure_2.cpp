@@ -149,6 +149,11 @@ public:
     {
         m_ptr->print();
     }
+
+    bool has_value()
+    {
+        return m_ptr != nullptr;
+    }
 };
 
 struct Line

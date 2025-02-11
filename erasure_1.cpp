@@ -138,6 +138,11 @@ public:
     {
         m_ptr->print();
     }
+
+    bool has_value()
+    {
+        return m_ptr != nullptr;
+    }
 };
 
 struct Line
@@ -165,4 +170,10 @@ int main()
 
     shape2 = shape;
     shape2.print();
+
+    Shape i_am_null {};
+    if ( not i_am_null.has_value() )
+        std::puts("I am null");
+    else
+        std::puts("This should not appear");
 }
