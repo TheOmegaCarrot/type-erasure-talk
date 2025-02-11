@@ -38,30 +38,30 @@ concept Shapelike = requires(T t) { t.print(); };
 class Shape
 {
 
-    struct Shape_Concept
+    struct Abstract_Shape
     {
-        Shape_Concept()                                = default;
-        Shape_Concept(const Shape_Concept&)            = delete;
-        Shape_Concept(Shape_Concept&&)                 = delete;
-        Shape_Concept& operator=(const Shape_Concept&) = delete;
-        Shape_Concept& operator=(Shape_Concept&&)      = delete;
-        virtual ~Shape_Concept()                       = default;
+        Abstract_Shape()                                 = default;
+        Abstract_Shape(const Abstract_Shape&)            = delete;
+        Abstract_Shape(Abstract_Shape&&)                 = delete;
+        Abstract_Shape& operator=(const Abstract_Shape&) = delete;
+        Abstract_Shape& operator=(Abstract_Shape&&)      = delete;
+        virtual ~Abstract_Shape()                        = default;
 
-        virtual void print()           = 0;
-        virtual Shape_Concept* clone() = 0;
+        virtual void print()            = 0;
+        virtual Abstract_Shape* clone() = 0;
     };
 
     template <typename T>
-    struct Shape_Model final : Shape_Concept
+    struct Concrete_Shape final : Abstract_Shape
     {
-        Shape_Model()                              = default;
-        Shape_Model(const Shape_Model&)            = delete;
-        Shape_Model(Shape_Model&&)                 = delete;
-        Shape_Model& operator=(const Shape_Model&) = delete;
-        Shape_Model& operator=(Shape_Model&&)      = delete;
-        virtual ~Shape_Model() final override      = default;
+        Concrete_Shape()                                 = default;
+        Concrete_Shape(const Concrete_Shape&)            = delete;
+        Concrete_Shape(Concrete_Shape&&)                 = delete;
+        Concrete_Shape& operator=(const Concrete_Shape&) = delete;
+        Concrete_Shape& operator=(Concrete_Shape&&)      = delete;
+        virtual ~Concrete_Shape() final override         = default;
 
-        Shape_Model(T wrapped)
+        Concrete_Shape(T wrapped)
                 : m_wrapped {wrapped}
         {
         }
@@ -73,13 +73,13 @@ class Shape
             m_wrapped.print();
         }
 
-        virtual Shape_Model* clone() final override
+        virtual Concrete_Shape* clone() final override
         {
-            return new Shape_Model {m_wrapped};
+            return new Concrete_Shape {m_wrapped};
         }
     };
 
-    Shape_Concept* m_ptr;
+    Abstract_Shape* m_ptr;
 
 public:
 
@@ -123,14 +123,14 @@ public:
     }
 
     Shape(Shapelike auto arg)
-            : m_ptr {new Shape_Model {arg}}
+            : m_ptr {new Concrete_Shape {arg}}
     {
     }
 
     Shape& operator=(Shapelike auto arg)
     {
         delete m_ptr;
-        m_ptr = new Shape_Model {arg};
+        m_ptr = new Concrete_Shape {arg};
         return *this;
     }
 
