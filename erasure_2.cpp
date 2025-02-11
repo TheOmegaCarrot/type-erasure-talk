@@ -58,7 +58,7 @@ class Shape
         virtual Abstract_Shape* clone() = 0;
     };
 
-    template <typename T>
+    template <Shapelike T>
     struct Concrete_Shape final : Abstract_Shape
     {
         Concrete_Shape()                                 = default;
