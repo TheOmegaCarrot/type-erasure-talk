@@ -1,0 +1,182 @@
+---
+Language:        Cpp
+# BasedOnStyle:  LLVM
+AccessModifierOffset: -4
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: None
+AlignConsecutiveMacros: None
+AlignEscapedNewlines: Right
+AlignOperands:   Align
+AlignTrailingComments: false
+
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowBreakBeforeNoexceptSpecifier: OnlyWithParen
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: false
+
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: true
+
+BinPackArguments: true
+BinPackParameters: true
+BitFieldColonSpacing: Both
+
+BreakBeforeBraces: Allman
+
+# BraceWrapping:
+#   AfterCaseLabel:  true
+#   AfterClass:      true
+#   AfterControlStatement: Never
+#   AfterEnum:       true
+#   AfterFunction:   true
+#   AfterNamespace:  false
+#   AfterStruct:     true
+#   AfterUnion:      true
+#   AfterExternBlock: false
+#   BeforeCatch:     false
+#   BeforeElse:      false
+#   BeforeLambdaBody: false
+#   BeforeWhile:     false
+#   IndentBraces:    false
+#   SplitEmptyFunction: false
+#   SplitEmptyRecord: false
+#   SplitEmptyNamespace: true
+
+BreakAfterAttributes: Leave
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeConceptDeclarations: Always
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: true
+BreakAfterReturnType: None
+BreakTemplateDeclarations: Yes
+
+ColumnLimit:     75
+
+CommentPragmas:  '^ NOLINT.*'
+
+CompactNamespaces: false
+
+ConstructorInitializerIndentWidth: 8
+
+ContinuationIndentWidth: 2
+
+Cpp11BracedListStyle: true
+
+DeriveLineEnding: true
+DerivePointerAlignment: false
+
+DisableFormat:   false
+
+EmptyLineAfterAccessModifier: Always
+EmptyLineBeforeAccessModifier: LogicalBlock
+
+FixNamespaceComments: true
+
+IncludeBlocks: Preserve
+
+IndentAccessModifiers: false
+IndentCaseBlocks: true
+IndentCaseLabels: true
+IndentExternBlock: Indent
+IndentGotoLabels: false
+IndentPPDirectives: AfterHash
+IndentRequiresClause:  true
+IndentWidth: 4
+IndentWrappedFunctionNames: false
+
+InsertBraces: false
+
+InsertNewlineAtEOF: false
+
+IntegerLiteralSeparator:
+  Binary: 0
+  Decimal: 0
+  Hex: 0
+
+KeepEmptyLinesAtTheStartOfBlocks: true
+
+LambdaBodyIndentation: Signature
+
+MaxEmptyLinesToKeep: 1
+
+NamespaceIndentation: Inner
+
+PPIndentWidth:   -1
+
+PackConstructorInitializers:  Never
+
+PenaltyBreakAssignment: 2
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 10
+PenaltyExcessCharacter: 1000
+PenaltyReturnTypeOnItsOwnLine: 60
+PenaltyIndentedWhitespace: 0
+
+PointerAlignment: Left
+ReferenceAlignment: Pointer
+
+RemoveSemicolon: false
+
+QualifierAlignment: Left
+# QualifierOrder: ['constexpr', 'static', 'inline', 'const', 'volatile', 'type']
+
+ReflowComments:  false
+
+RemoveBracesLLVM: false
+
+RequiresClausePosition: OwnLine
+RequiresExpressionIndentation: Keyword
+
+SeparateDefinitionBlocks:  Always
+
+ShortNamespaceLines: 0
+
+SortIncludes:    CaseInsensitive
+SortUsingDeclarations: true
+
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: true
+SpaceAfterTemplateKeyword: true
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: true
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles:  Never
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: true
+SpacesInLineCommentPrefix:
+  Minimum:         1
+  Maximum:         -1
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+Standard:        Auto
+
+TabWidth:        8
+UseCRLF:         false
+UseTab:          Never
+...
+
