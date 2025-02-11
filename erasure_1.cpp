@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <stdexcept>
 #include <utility>
 
 struct Octogon
@@ -136,6 +137,9 @@ public:
 
     void print()
     {
+        if ( ! m_ptr )
+            throw std::runtime_error {"Null access"};
+
         m_ptr->print();
     }
 
